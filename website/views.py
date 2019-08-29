@@ -26,6 +26,26 @@ def index(request):
         }
         return render(request, 'index.html', contexto)
 
-
-    
     return render(request, 'index.html')
+
+
+
+def ong(request):
+
+    if request.method == 'POST':
+        Ong = Ong()
+        Ong.Responsavel = request.POST.get('Responsavel')
+        Ong.Nome = request.POST.get('Nome')
+        Ong.Endereço = request.POST.get('Endereço')
+        Ong.Telefone = request.POST.get('Telefone')
+        Ong.Horario = request.POST.get('Horario de Atendimento')
+        Ong.Data = request.POST.get('Data de Funcionamento')
+
+        contexto = {
+            'nome': Ong.Responsavel
+        }
+        return render(request, 'cadastrar.html', contexto)
+
+
+    return render(request, 'cadastrar.html')
+

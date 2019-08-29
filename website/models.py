@@ -67,3 +67,45 @@ class Pessoa(models.Model):
 
     def __str__(self):
        return self.nome + ' ' + self.sobrenome
+
+
+
+class Ong(models.Model):
+    nome_responsavel = models.CharField(
+        max_length=255,
+        verbose_name='Responsavel',
+    )
+
+    nome = models.CharField(
+        max_length=255,
+        verbose_name='Nome',
+    )
+    endereco = models.CharField(
+        max_length=255,
+        verbose_name='Endereço',
+    )
+    telefone = models.CharField(
+        max_length=255,
+        verbose_name='Telefone',
+    )
+    horario = models.CharField(
+        max_length=255,
+        verbose_name='Horario de Atendimento',
+    )
+    data = models.CharField(
+        max_length=255,
+        verbose_name='Data de Funcionamento',
+    )
+
+            
+    motivo = models.TextField()
+
+    criado_em = models.DateTimeField(
+        auto_now_add=True
+    )
+    ativo = models.BooleanField(
+        default=True
+    )
+
+    def __str__(self):
+        return self.nome + ' ' + self.sobrenome
