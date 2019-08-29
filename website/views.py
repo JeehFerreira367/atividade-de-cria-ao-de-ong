@@ -4,7 +4,8 @@ from website.models import Pessoa
 # Create your views here.
 
 def index(request):
-    
+
+
     if request.method == 'POST':
         pessoa = Pessoa()
         pessoa.nome = request.POST.get('nome')
@@ -23,7 +24,8 @@ def index(request):
         contexto = {
             'nome': pessoa.nome
         }
-    
-    return render(request, 'index.html', contexto)
+        return render(request, 'index.html', contexto)
 
-return render(request, 'index.html')
+
+    
+    return render(request, 'index.html')

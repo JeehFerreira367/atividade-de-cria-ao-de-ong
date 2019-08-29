@@ -35,8 +35,8 @@ class Pessoa(models.Model):
     complemento = models.CharField(
         max_length=255,
         verbose_name='Complemento',
-        blank=True,
         null=True,
+        blank=True
     )
     genero = models.CharField(
         choices=GENEROS,
@@ -64,6 +64,6 @@ class Pessoa(models.Model):
     ativo = models.BooleanField(
         default=True
     )
- 
+
     def __str__(self):
-        return self.nome + ' ' + self.sobrenome
+       return self.nome + ' ' + self.sobrenome
