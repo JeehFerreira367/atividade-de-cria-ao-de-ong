@@ -1,0 +1,46 @@
+{% extends 'shared/layout.html' %}
+{% load staticfiles %}
+
+{% block conteudo %}
+
+    <h1>bem-cindo os petisk</h1>
+    <h2>cadastre-se para adocao</h2>
+    
+    <form action="" method="POST">
+        <label for="">Nome:</label>
+        <input type="text" name="Nome">
+
+        <label for="">Sobrenome:</label>
+        <input type="0" name="Sobrenome">
+
+        <label for="">Data_de_nacimento </label>
+        <input type="date" name="Data_de_nacimento">
+
+        <label for="">email </label>
+        <input type="email" name="email">
+
+        <label for="">str_cep </label>
+        <input type="text" name="str_cep">
+
+        <label for="">complemento </label>
+        <input type="text" name="complemento">
+
+        <select name="genero">
+            <option value="F">Feminino</option>
+            <option value="M">Masculino</option>
+            <option value="O">Outro</option>
+        </select>
+        
+        <label for="Telefone">Telefone: </label>
+        <input type="text" name="Numero">
+
+        <label for="Celular">Celular: </label>
+        <input type="text" name="Celular">
+        
+        <label for="Motivo">Motivo: </label>
+        <textarea name="Motivo"  cols="30" rows="10"></textarea>
+ 
+        <input type="submit" value="Cadastrar"> 
+    </form>
+{% endblock %}
+
